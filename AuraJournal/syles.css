@@ -1,0 +1,127 @@
+/* Colors */
+:root {
+  --dark-bg: #141D35;
+  --vibrant-blue: #4f46e5;
+  --light-bg: #f0f2f5;
+  --white: #ffffff;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top nav bar */
+header {
+  background: var(--dark-bg);
+  border-bottom: 2px solid var(--vibrant-blue);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--vibrant-blue);
+  letter-spacing: 2px;
+  cursor: default;
+  user-select: none;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 25px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: var(--vibrant-blue);
+}
+
+/* Login button */
+.btn-login {
+  background-color: var(--vibrant-blue);
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px var(--vibrant-blue);
+}
+.btn-login:hover {
+  background-color: #3a3ed7;
+  box-shadow: 0 0 15px var(--vibrant-blue);
+}
+
+/* Main content */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+  gap: 24px;
+}
+
+main h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--vibrant-blue);
+  text-shadow: 0 0 15px #6c6efb88;
+}
+
+main p {
+  max-width: 500px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #c3c7f7cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 16px 20px;
+  background: #111b2e;
+  color: #7b7f9a;
+  font-size: 0.9rem;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 2rem;
+  }
+  main p {
+    font-size: 1rem;
+  }
+  header {
+    padding: 15px 20px;
+  }
+  nav a {
+    margin-left: 15px;
+  }
+}
